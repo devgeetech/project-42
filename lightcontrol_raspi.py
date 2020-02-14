@@ -1,4 +1,6 @@
 import RPi.GPIO as GPIO
+import time
+
 GPIO.setmode(GPIO.BOARD)
 
 GPIO.setwarnings(False)
@@ -39,6 +41,15 @@ def setlight(listate,pino):
                 GPIO.output(pino[i][j], GPIO.LOW)
                 
 
+def blink():
+    lightstate = [[1,0,0],[0,1,0],[1,0,0],[0,1,0]]
+    setlight(lightstate,pin)
+    time.sleep(1)
+    lightstate = [[0,0,0],[0,0,0],[0,0,0],[0,0,0]]
+    setlight(lightstate,pin)
+    time.sleep(1)
+    
+
 def light(state):
     
     for i in range(0,len(state)):
@@ -46,6 +57,9 @@ def light(state):
             lightstate[i] = [0,0,1]
         elif state[i] == 1:
             lightstate[i] = [0,1,0]
+        elif state[i] == 3:
+            blink()
+            break
         else:
             lightstate[i] = [1,0,0]
         print lightstate
