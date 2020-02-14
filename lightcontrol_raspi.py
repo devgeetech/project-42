@@ -40,7 +40,6 @@ def setlight(listate,pino):
                 
 
 def light(state):
-    
     for i in range(0,len(state)):
         if state[i] == 2:
             lightstate[i] = [0,0,1]
