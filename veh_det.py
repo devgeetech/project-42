@@ -16,8 +16,8 @@ def getVehs():
      cam1.release()
      bbox, label, conf = cv.detect_common_objects(image)
      print('Number of cars in the image is '+ str(label.count('car')))
-     print('Number of cars in the image is '+ str(label.count('bus')))
-     print('Number of cars in the image is '+ str(label.count('motorcycle')))
+     print('Number of buses in the image is '+ str(label.count('bus')))
+     print('Number of motorcycle in the image is '+ str(label.count('motorcycle')))
      totveh = label.count('car') + label.count('bus') + label.count('motorcycle')
      totwei = label.count('car') + (label.count('bus')*3) + label.count('motorcycle')
      plt.imshow(image)
@@ -25,4 +25,4 @@ def getVehs():
      return ([label.count('car') ,label.count('bus'), label.count('motorcycle'), totveh, totwei])
      #return(label.count('car'))
 
-#getVehs()
+#getVehs()7
