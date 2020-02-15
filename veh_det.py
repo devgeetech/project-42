@@ -7,31 +7,39 @@ Created on Tue Feb 11 19:24:30 2020
 import cv2
 import cvlib as cv
 import matplotlib.pyplot as plt
+#import numpy as numm
 
-def getVehs():
-     cam1 = cv2.VideoCapture("1.avi")
+def getVehs(frame_no):
+     cam1 = cv2.VideoCapture("1.mp4")
+     cam1.set(1, frame_no);
      success1, image1 = cam1.read()
      cam1.release()
+     #plt.imshow(numm.image2np(image1.data))
      plt.imshow(image1)
-     #plt.show()
+     plt.show()
      
-     cam2 = cv2.VideoCapture("2.avi")
+     cam2 = cv2.VideoCapture("2.mp4")
+          
+     #cam2.set(1,frame_no);
+     cam2.set(1, frame_no);
      success2, image2 = cam2.read()
      cam2.release()
      plt.imshow(image2)
-     #plt.show()
+     plt.show()
      
-     cam3 = cv2.VideoCapture("3.avi")
+     cam3 = cv2.VideoCapture("3.mp4")
+     cam3.set(1,frame_no);
      success3, image3 = cam3.read()
      cam3.release()
      plt.imshow(image3)
-     #plt.show()
+     plt.show()
      
-     cam4 = cv2.VideoCapture("4.avi")
+     cam4 = cv2.VideoCapture("4.mp4")
+     cam4.set(1,frame_no);
      success4, image4 = cam4.read()
      cam4.release()
      plt.imshow(image4)
-     #plt.show()
+     plt.show()
 
      bbox, label1, conf = cv.detect_common_objects(image1)
      bbox, label2, conf = cv.detect_common_objects(image2)
@@ -62,4 +70,4 @@ def getVehs():
      return (ways)
      #return(label.count('car'))
 
-getVehs()
+#getVehs()
