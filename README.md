@@ -8,7 +8,7 @@ This is fed into an efficient algorithm, that calculates the inter-green time fo
 
 Since passenger vehicles like buses are to be given more priority, the architecture detects such vehicles and applies a larger weight to them, hence increasing the inter-green time for that road.
 
-## BENEFITS  	
+## Benefits 	
 *	Eliminates idle wait. (Unlike the current system, signal will not be kept open for lanes with no vehicles.)
 *	Reduction in the average waiting time will also reduce the percentage of traffic violations. (This will enhance the efficiency of commuting experience and also improves the fame of the department.)
 *	Human intervention can be significantly reduced at the traffic signals. Officers may be assigned to report at the control rooms and they will have to manually intervene only for unexpected emergencies.
