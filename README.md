@@ -7,7 +7,7 @@
 *	Install Git (Ref: https://raspberrypi.stackexchange.com/questions/8658/can-i-install-git-on-raspbian)
 *	Clone the project-42 repo (Run this in terminal: 
    $ git clone http://github.com/devgeetech/project-42 
-*   If you are video file as camera input, place the 4 video files in the root folder.
+*   If you are using video files as camera input, place the 4 video files in the root folder.
 
 ## Configuration:
 *	The pin[] array (in lightcontrol.py) has the list of GPIOs (Physical naming convention). In the order as follows
