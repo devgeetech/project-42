@@ -1,4 +1,6 @@
-import lightcontrol
+import lightcontrol_pc_only as lightcontrol
+#import lightcontrol
+#----->Comment the first line and uncomment the second line if the code is executed on a Raspberry Pi<----#
 import time
 import veh_det
 
