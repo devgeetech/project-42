@@ -25,8 +25,10 @@ Since passenger vehicles like buses are to be given more priority, the architect
 *	Clone the project-42 repo (Run this in terminal: 
    $ git clone http://github.com/devgeetech/project-42 
 *   If you are using video files as camera input, place the 4 video files in the root folder.
+*   This repo is configured to use video files as camera input. To use actual camera feed, see veh_det.py and make the necessary updations specified in it.
 
-## Configuration:
+## Raspberry Pi PIN Configuration:
+
 *	The pin[] array (in lightcontrol.py) has the list of GPIOs (Physical naming convention). In the order as follows
     *	3: Light-Post1, Red
     *	5: Light-Post1, Yellow
@@ -41,7 +43,7 @@ Since passenger vehicles like buses are to be given more priority, the architect
     *	18: Light-Post4, Yellow
     *	19: Light-Post4, Green
 *	You can configure it by changing the pin[] array accordingly
-*	Connect the lights through relays or any required control circuitry according to the applications
+*	Connect the lights through relays or any required control circuitry according to the order given above. e.g. connect LED of traffic post 1 to PIN 3
 
 
 ##	References:

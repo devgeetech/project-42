@@ -47,13 +47,10 @@ def light(state):
         elif state[i] == 1:
             output.append('y')
             lightstate[i] = [0,1,0]
-        # elif state[i] == 3: #To blink alternate red and yellow lights
-        #     blink()
         else:
             output.append('r')
             lightstate[i] = [1,0,0]
     print(output)
-    # print lightstate
     setlight(lightstate,pin)
 
 def setlight(listate,pino):
